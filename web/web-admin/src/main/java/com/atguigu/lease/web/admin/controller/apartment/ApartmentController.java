@@ -44,8 +44,6 @@ public class ApartmentController {
 
         IPage<ApartmentItemVo> page = new Page<>(current,size);
         IPage<ApartmentItemVo> list = service.pageApartmentItemByQuery(page,queryVo);
-
-
         return Result.ok(list);
     }
 

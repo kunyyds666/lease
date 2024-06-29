@@ -4,7 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.atguigu.lease.web.admin.mapper.ApartmentInfoMapper">
     <!-- todo 理解多表联查-->
-    <select id="pageItem" resultType="com.atguigu.lease.web.admin.vo.apartment.ApartmentItemVo">
+
+    <select id="pageApartmentItemByQuery" resultType="com.atguigu.lease.web.admin.vo.apartment.ApartmentItemVo">
         select ai.id,
         ai.name,
         ai.introduction,
@@ -65,6 +66,5 @@
         and status in (2, 5)
         group by apartment_id) cc
         on ai.id = cc.apartment_id
-
     </select>
 </mapper>
