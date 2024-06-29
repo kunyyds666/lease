@@ -33,7 +33,6 @@ import java.util.List;
  */
 @Service
 public class ApartmentInfoServiceImpl extends ServiceImpl<ApartmentInfoMapper, ApartmentInfo> implements ApartmentInfoService {
-
     @Autowired
     private GraphInfoService graphInfoService;
     @Autowired
