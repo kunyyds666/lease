@@ -4,4 +4,20 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.atguigu.lease.web.admin.mapper.SystemUserMapper">
 
+
+    <select id="selectOneByUsername" resultType="com.atguigu.lease.model.entity.SystemUser">
+        select id,
+               username,
+               password,
+               name,
+               type,
+               phone,
+               avatar_url,
+               additional_info,
+               post_id,
+               status
+        from system_user
+        where is_deleted = 0
+          and username = #{username}
+    </select>
 </mapper>
